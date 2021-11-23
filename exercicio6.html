@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo 6</title>
+
+</head>
+
+<body bgcolor="MistyRose">
+
+    <h1 align="center">Exercicío 6 </h1><br>
+    <center>
+        <table border="1" width="500" height="200" bgcolor="E0FFFF">
+
+            <tr>
+                <td align="center">
+
+                    <h2>Informar o nome no formato "referência bibliográfica"</h2>
+                </td align="center">
+            </tr>
+
+
+            <tr>
+
+                <td align="center">
+                    <br>
+                    <h4>Digite primeiro o ultimo sobrenome e depois o resto do nome</h4>
+
+                    <script language="javascript">
+                        function enviarDados(nomecompleto) {
+                            nomecompleto = nomecompleto.replace(/\s(de|da|dos|das)\s/g, ' ');
+                            var iniciais = nomecompleto.match(/\b(\w)/gi);
+                            var nome = nomecompleto.split(' ')[1]
+                            var ultimoSobrenome = nomecompleto.split(' ')[0].toUpperCase();
+                            var sobrenomes = iniciais.splice(2, iniciais.length - 2).join('. ')
+
+                            document.write("<center>");
+                            document.write("Foi digitado: " + nomecompleto + "<br>")
+                            document.write("<br>");
+                            document.write("<center>");
+                            document.write("<table border>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write("entrada  : ");
+                            document.write("</td>");
+                            document.write("<td>");
+                            document.write(nomecompleto);
+                            document.write("</td>");
+                            document.write("</tr>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write("Saída  : ");
+                            document.write("</td>");
+                            document.write("<td>");
+                            document.write("<b>" + ultimoSobrenome + "</b>" + "," + " " + nome + "," + " " + sobrenomes.toUpperCase() + ".");
+                            document.write("</td>");
+                            document.write("</tr>");
+                            document.write("</table>");
+                            document.write("</center>");
+                        }
+                    </script>
+
+                    <form name="formulario"><br>
+
+                        <input type="text" placeholder="nome" onblur="enviarDados(this.value)" />
+
+                        <p></p> <input type="button" value="Enviar" onclick="enviarDados();">
+
+                        <br><br>
+
+                    </form>
+
+                </td align="center">
+            </tr>
+        </table>
+    </center>
+
+</body>
+
+</html>

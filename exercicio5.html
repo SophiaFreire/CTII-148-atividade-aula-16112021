@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo 5</title>
+
+</head>
+
+<body bgcolor="MistyRose">
+
+    <h1 align="center">Exercicío 5 </h1><br>
+    <center>
+        <table border="1" width="500" height="200" bgcolor="E0FFFF">
+
+            <tr>
+                <td align="center">
+
+                    <h2>Informar o nome no formato "catálogo telefônico"</h2>
+                </td align="center">
+            </tr>
+            <tr>
+                <td align="center">
+                    <br>
+                    <h4>Digite primeiro o nome e depois o último sobrenome</h4>
+                    <script language="javascript">
+                        function enviarDados() {
+                            var nome, ultimoSobrenome;
+                            nome = document.formulario.txtNome.value;
+                            ultimoSobrenome = document.formulario.txtultimoSobrenome.value;
+                            document.write("<center>");
+                            document.write("Foi digitado: " + nome + " " + ultimoSobrenome + "<br>")
+                            document.write("<br>");
+                            document.write("<center>");
+                            document.write("<table border>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write("entrada  : ");
+                            document.write("</td>");
+                            document.write("<td>");
+                            document.write(nome + " " + ultimoSobrenome);
+                            document.write("</td>");
+                            document.write("</tr>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write("Saída  : ");
+                            document.write("</td>");
+                            document.write("<td>");
+                            document.write(ultimoSobrenome + "," + " " + nome);
+                            document.write("</td>");
+                            document.write("</tr>");
+                            document.write("</table>");
+                            document.write("</center>");
+
+                        }
+                    </script>
+
+                    <form name="formulario"><br> <input type="text" name="txtNome" placeholder="nome" value=""><br>
+
+                        <p></p> <input type="text" name="txtultimoSobrenome" placeholder="ultimo sobrenome" value=""><br>
+
+                        <p></p> <input type="button" value="Enviar" onclick="enviarDados();">
+
+                        <br><br>
+
+                    </form>
+                </td align="center">
+            </tr>
+        </table>
+    </center>
+
+</body>
+
+</html>
