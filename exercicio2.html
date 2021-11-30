@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <meta charset="uft-8">
+    <title>Exercicío 2 </title>
+
+
+</head>
+
+<body bgcolor="MistyRose">
+    <h1 align="center">Exercicío 2 </h1><br>
+    <center>
+        <table border="1" width="500" height="200" bgcolor="E0FFFF">
+            <tr>
+                <td align="center">
+                    <h2>Receber um caracter e um número inteiro</h2>
+            </tr>
+            <tr>
+
+                </td align="center">
+                <td align="center">
+                    <script language="javascript">
+                        function enviarDados() {
+                            var n, caracter;
+                            caracter = document.formulario.txtNome.value;
+                            n = parseInt(document.getElementById("n").value);
+                            document.write("<center>");
+                            document.write("Foi digitado: " + caracter + "<br>")
+                            document.write("<br>");
+                            document.write("<center>");
+                            document.write("<table border>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write(caracter.repeat(n));
+                            document.write("</tr>");
+                            document.write("</table>");
+                            document.write("</center>");
+
+                        }
+                    </script>
+                    <br>
+
+                    <form name="formulario"><br> <input type="text" name="txtNome" placeholder="caracter" value=""><br>
+                        <p></p><input type="text" size="20" id="n" placeholder="numero"><br><br>
+                        <input type="button" value="Enviar" onclick="enviarDados();">
+
+                        <br><br>
+
+                    </form>
+                </td align="center">
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
