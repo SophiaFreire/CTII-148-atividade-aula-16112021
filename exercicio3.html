@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo 3</title>
+
+</head>
+
+<body bgcolor="MistyRose">
+
+    <h1 align="center">Exercicío 3 </h1><br>
+    <center>
+        <table border="1" width="500" height="200" bgcolor="E0FFFF">
+
+            <tr>
+                <td align="center">
+
+                    <h2>Receber uma string qualquer</h2>
+                </td align="center">
+            </tr>
+            <tr>
+                <td align="center">
+
+                    <script language="javascript">
+                        function enviarDados() {
+                            var nome;
+                            nome = document.formulario.txtNome.value;
+                            var str = nome;
+
+                            qtdeConsoantes = str => Array.from(str)
+                                .filter(nome => 'bcdfghjklmnpqrstvwxyz'.includes(nome)).length;
+
+                            qtdeVogais = str => Array.from(str)
+                                .filter(nome => 'aeiou'.includes(nome)).length;
+
+                            qtdeDigitos = str => Array.from(str)
+                                .filter(nome => '1234567890'.includes(nome)).length;
+
+                            document.write("<center>");
+                            document.write("Foi digitado: " + nome + "<br>")
+                            document.write("<br>");
+                            document.write("<center>");
+                            document.write("<table border>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write("Qtde de vogais:");
+                            document.write("</td>");
+                            document.write("<td>");
+                            document.write(qtdeVogais(nome));
+                            document.write("</td>");
+                            document.write("</tr>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write("Qtde de consoantes:");
+                            document.write("</td>");
+                            document.write("<td>");
+                            document.write(qtdeConsoantes(nome));
+                            document.write("</td>");
+                            document.write("</tr>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write("Qtde de dígitos:");
+                            document.write("</td>");
+                            document.write("<td>");
+                            document.write(qtdeDigitos(nome));
+                            document.write("</td>");
+                            document.write("</tr>");
+                            document.write("<tr>");
+                            document.write("<td>");
+                            document.write("Qtde de caracteres:");
+                            document.write("</td>");
+                            document.write("<td>");
+                            document.write(nome.length);
+                            document.write("</td>");
+                            document.write("</tr>");
+                            document.write("</table>");
+                            document.write("</center>");
+                        }
+                    </script>
+                    <br>
+
+                    <form name="formulario"><br> <input type="text" name="txtNome" placeholder="caracteres" value=""><br>
+                        <p></p>
+                        <input type="button" value="Enviar" onclick="enviarDados();">
+
+                        <br><br>
+
+                    </form>
+                </td align="center">
+            </tr>
+        </table>
+    </center>
+
+</body>
+
+</html>
