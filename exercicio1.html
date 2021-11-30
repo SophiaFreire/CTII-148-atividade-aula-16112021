@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo 1</title>
+
+</head>
+
+<body bgcolor="MistyRose">
+
+    <h1 align="center">Exercicío 1 </h1><br>
+    <center>
+        <table border="1" width="500" height="200" bgcolor="E0FFFF">
+
+            <tr>
+                <td align="center">
+
+                    <h2>Receber uma string qualquer</h2>
+                </td align="center">
+            </tr>
+            <tr>
+                <td align="center">
+
+                    <script language="javascript">
+                        function enviarDados() {
+                            var texto, saida;
+                            texto = document.formulario.txtTexto.value;
+
+                            document.getElementById("txtSaidaNome").innerHTML = texto;
+                            document.write("<center>");
+                            document.write("Foi digitado: " + texto + "<br>")
+                            document.write("<br>");
+                            document.write("<center>");
+                            document.write("<table border>");
+                            for (saida = 0; saida < texto.length; ++saida) {
+                                document.write("<tr>");
+                                document.write("<td>" + texto.charAt(saida) + "</td>");
+                                document.write("</tr>");
+
+                            }
+                            document.write("</table>");
+                            document.write("</center>");
+
+                            document.write("<br>");
+                            document.write("<center>");
+                            document.write("<table border>");
+                            document.write("<tr>");
+                            for (saida = 0; saida < texto.length; ++saida) {
+
+
+                                document.write("<td>" + texto.charAt(saida) + "</td>");
+
+                            }
+                            document.write("</tr>");
+                            document.write("</table>");
+                            document.write("</center>");
+
+
+                        }
+                    </script>
+                    <br>
+
+                    <form name="formulario"><br> <input type="text" name="txtTexto" placeholder="Digite os caracteres" value=""><br>
+                        <p></p>
+                        <input type="button" value="Enviar" onclick="enviarDados();">
+
+                        <br><br>
+
+                    </form>
+                </td align="center">
+            </tr>
+        </table>
+    </center>
+    <p id="txtSaidaNome"></p>
+</body>
+
+</html>
